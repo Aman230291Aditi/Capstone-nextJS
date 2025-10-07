@@ -42,17 +42,17 @@ const TestimonialSlider: FC<CustomHeroSliderProps> = ({ slides }) => {
                   modules={[Navigation, Pagination, Autoplay]}
                   spaceBetween={0}
                   slidesPerView={1}
-                  onSwiper={(swiper) => {
-                    // Delay assignment to ensure refs are set
-                    setTimeout(() => {
-                      if (prevRef.current && nextRef.current) {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                      }
-                    });
-                  }}
+                  // onSwiper={(swiper) => {
+                  //   // Delay assignment to ensure refs are set
+                  //   setTimeout(() => {
+                  //     if (prevRef.current && nextRef.current) {
+                  //       swiper.params.navigation.prevEl = prevRef.current;
+                  //       swiper.params.navigation.nextEl = nextRef.current;
+                  //       swiper.navigation.init();
+                  //       swiper.navigation.update();
+                  //     }
+                  //   });
+                  // }}
                   loop={true}
                   autoplay={{ delay: 4000 }}
                   navigation={{
